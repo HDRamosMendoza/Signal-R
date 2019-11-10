@@ -9,13 +9,21 @@ manejar conexiones en tiempo real.
  Server - SentEvents (por defecto)
  Long Polling
 
+* Web Sockets
+	- Full dúplex
+	- Soporta texto y binario.
+	
+	Proceso.
+	Te permite una comunicación vía direccional. Se puede enviar mensajes desde el cliente y viceversa de manera simultanea.
+	Soporta texto y binario.
+ 
 * Server - Sent Events
 	- El servidor envía mensajes al cliente.
 	- Comunicación de una vía.
 	- Solo texto.
 	
 	Proceso.
-	El servidor solo puede enviar mensaje al cliente.
+	El servidor solo puede enviar mensaje al cliente. La desventaja que solo se envia texto y no se puede enviar data binaria.
  
 * Long Polling.
 	- Se hace una petición cada X tiempo.
