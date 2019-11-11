@@ -1,22 +1,11 @@
 ** APOYO
-
 npm install @aspnet/signalr
-
-<script src="~/lib/signalR/signalr.js"></script>
-<script src="~/js/chat.js"></script>
-
-
-   // Configurar nueva ruta ""/chatHub" de js
-            app.UseSignalR(x =>
-            {
-                // Registro de los Hubs
-                x.MapHub<ChatHub>("/chatHub");
-            });
 
 1. Crear una carpeta Hubs al nivel de las carpetas Controllers, Models y Views/Home/Index
 	
 	Hubs/ ChatHub.cs
 	
+	using Microsoft.AspNetCore.SignalR;
 	public class ChatHub: Hub
     {
         public async Task SendMessage(string user, string message)
@@ -26,11 +15,9 @@ npm install @aspnet/signalr
             // await Clients.Caller.SendAsync("ReceiveMessage", user, message);
             await Clients.Caller.SendAsync("ReceiveMessage", user, message);
             // Tiempo
-            await Task.Delay(1000);
-
+            // await Task.Delay(1000);
             await Clients.Caller.SendAsync("ReceiveMessage", user, message);
         }
-
     }
 
 2. js/Chat.js
@@ -91,15 +78,15 @@ document.getElementById("sendButton").addEventListener("click", event => {
 <script src="~/lib/signalR/signalr.js"></script>
 <script src="~/js/chat.js"></script>
 
+4. En Startup.cs
+	Debajo de app.UseCookiePolicy();
+	
+	// Configurar nueva ruta ""/chatHub" de js
+	app.UseSignalR(x =>
+	{
+		// Registro de los Hubs
+		x.MapHub<ChatHub>("/chatHub");
+	});
 
-	public async Task SendMessage(string user, string message)
-        {
-            await Clients.All.SendAsync("ReceiveMessage", user, message);
-        }
-    }
-	
-	
-	D:\RepositorioGitHub\Signal-R\1Proyecto\HelloWork\wwwroot\lib\signalR
-	
-	
-	D:\RepositorioGitHub\Signal-R\1Proyecto\HelloWork\node_modules\@aspnet\signalr\dist\browser
+D:\RepositorioGitHub\Signal-R\1Proyecto\HelloWork\wwwroot\lib\signalR
+D:\RepositorioGitHub\Signal-R\1Proyecto\HelloWork\node_modules\@aspnet\signalr\dist\browser
