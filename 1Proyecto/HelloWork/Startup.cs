@@ -34,8 +34,7 @@ namespace HelloWork
 
             // Agregar SignalR
             services.AddSignalR();
-
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

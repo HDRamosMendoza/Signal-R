@@ -79,7 +79,13 @@ document.getElementById("sendButton").addEventListener("click", event => {
 <script src="~/js/chat.js"></script>
 
 4. En Startup.cs
-	Debajo de app.UseCookiePolicy();
+
+	4.1 De bajo de services.Configure<CookiePolicyOptions>
+	
+	// Agregar SignalR
+    services.AddSignalR();
+	
+	4.2 De bajo de app.UseCookiePolicy();
 	
 	// Configurar nueva ruta ""/chatHub" de js
 	app.UseSignalR(x =>
