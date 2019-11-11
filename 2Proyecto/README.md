@@ -45,4 +45,7 @@ manejar conexiones en tiempo real.
 	Se manda una peticion por JS al servidor. Si a teniado algún tipo de actualización.
 	Se realiza peticiones por AJAX de forma repetitiva al servidor.
 	
+EN CONSOLA:
+
+> negotiate > Preview > availableTransports
 	

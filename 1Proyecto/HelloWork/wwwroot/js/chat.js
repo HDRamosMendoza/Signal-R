@@ -3,6 +3,7 @@
 // Por ejemplo: 
 //    .withUrl("/chatHub", signalR.HttpTransportType.ServerSentEvents).build()
 //    .withUrl("/chatHub", signalR.HttpTransportType.LongPolling).build()
+//    .withUrl("/chatHub").build() => Web Sockets
 
 const connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 
