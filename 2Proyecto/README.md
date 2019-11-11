@@ -48,4 +48,16 @@ manejar conexiones en tiempo real.
 EN CONSOLA:
 
 > negotiate > Preview > availableTransports
+
+** Receptores de Mensaje.
+
+- All: Todos van a recibir el mensaje.
+- Caller: El emisor es el que recibirá el mensaje.
+- Others: Todos excepto el emisor recibirán el mensaje.
+- Group: Todos los mienbros de un grupo dado recibirán el mensaje.
+- Client: Un conjunto de personas específicas recibirán el mensaje.
+- User: Un conjunto de usuarios registrados en tu página recibirá el mensaje.
+
+
+
 	

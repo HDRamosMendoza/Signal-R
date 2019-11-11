@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using TransporteSignalR.Hubs;
 
 namespace TransporteSignalR
 {
@@ -31,6 +33,8 @@ namespace TransporteSignalR
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            // Agregar SignalR
+            services.AddSignalR();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -51,6 +55,13 @@ namespace TransporteSignalR
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            // Configurar nueva ruta ""/chatHub" de js
+            app.UseSignalR(x =>
+            {
+                // Registro de los Hubs
+                x.MapHub<ChatHub>("/chatHub");
+            });
 
             app.UseMvc(routes =>
             {
