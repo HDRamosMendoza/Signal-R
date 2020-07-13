@@ -1,6 +1,8 @@
 ** APOYO
 npm install @aspnet/signalr
 
+Hub
+
 1. Crear una carpeta Hubs al nivel de las carpetas Controllers, Models y Views/Home/Index
 	
 	Hubs/ ChatHub.cs
@@ -21,7 +23,7 @@ npm install @aspnet/signalr
     }
 
 2. js/Chat.js
-			
+			 
 // El signalR se debe de instalar y usaremos NPM para instalar el paquete(NODE JS)
 // La función .withUrl tiene un segundo parametro que podemos indicar si queremo indicar algún otro protocolo. 
 // Por ejemplo: 
