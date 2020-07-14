@@ -3,6 +3,13 @@ npm install @aspnet/signalr
 
 Hub
 
+** Crear proyecto.
+    A. File > New > Project
+    B. New Project > Installed > Visual C# > .NET Core > ASP.NET Core Web Application
+    C. Agregamos el nombre.
+    D. .NET CORE | ASP.NET Core 2.1 | Web Application (Model View Controller) | Configure for HTTPS.
+
+
 1. Crear una carpeta Hubs al nivel de las carpetas Controllers, Models y Views/Home/Index
 	
 	Hubs/ ChatHub.cs
