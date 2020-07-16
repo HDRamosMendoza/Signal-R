@@ -1,7 +1,7 @@
 ** APOYO
 npm install @aspnet/signalr
 
-Hub
+
 
 ** Crear proyecto.
     A. File > New > Project
@@ -9,6 +9,9 @@ Hub
     C. Agregamos el nombre.
     D. .NET CORE | ASP.NET Core 2.1 | Web Application (Model View Controller) | Configure for HTTPS.
 
+Hub. Es la clase que se encarga de coordinar la comunicación bidireccional entre el CLIENTE y el SERVIDOR.
+     Desde esta clase vamos a llamar funciones desde JS. Desde esta clase podré mandar un mensajes a los
+     clientes y en este mensaje voy a indicar la función de JS que quiero que se ejecute.
 
 1. Crear una carpeta Hubs al nivel de las carpetas Controllers, Models y Views/Home/Index
 	
