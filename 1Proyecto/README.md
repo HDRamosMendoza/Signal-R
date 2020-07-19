@@ -15,7 +15,7 @@ Hub. Es la clase que se encarga de coordinar la comunicación bidireccional entr
 
 1. Crear una carpeta Hubs al nivel de las carpetas Controllers, Models y Views/Home/Index
 	
-	Hubs/ ChatHub.cs
+	Hubs/ ChatHub.cs 
 	
 	using Microsoft.AspNetCore.SignalR;
 	public class ChatHub: Hub
