@@ -1,8 +1,8 @@
 ﻿// El signalR se debe de instalar y usaremos NPM para instalar el paquete(NODE JS)
 // La función .withUrl tiene un segundo parametro que podemos indicar si queremo indicar algún otro protocolo. 
 // Por ejemplo: 
-//    .withUrl("/chatHub", signalR.HttpTransportType.ServerSentEvents).build()
-//    .withUrl("/chatHub", signalR.HttpTransportType.LongPolling).build()
+//    .withUrl("/chatHub", signalR.HttpTransportType.ServerSentEvents).build() ---> eventsource
+//    .withUrl("/chatHub", signalR.HttpTransportType.LongPolling).build() ---> pending
 //    .withUrl("/chatHub").build() => Web Sockets
 
 const connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();

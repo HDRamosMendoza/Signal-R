@@ -86,7 +86,7 @@ document.getElementById("sendButton").addEventListener("click", event => {
     </div>
 </div>
 
-
+<!-- Signal R debe de estar creado antes que chat.js -->
 <script src="~/lib/signalR/signalr.js"></script>
 <script src="~/js/chat.js"></script>
 
@@ -106,5 +106,14 @@ document.getElementById("sendButton").addEventListener("click", event => {
 		x.MapHub<ChatHub>("/chatHub");
 	});
 
-D:\RepositorioGitHub\Signal-R\1Proyecto\HelloWork\wwwroot\lib\signalR
-D:\RepositorioGitHub\Signal-R\1Proyecto\HelloWork\node_modules\@aspnet\signalr\dist\browser
+5. Instalar las SIGNAL R
+    - Vamos a la ruta. D:\RepositorioGitHub\Signal-R\1Proyecto\HelloWork
+    - CMD => 
+        npm init -y
+        npm install @aspnet/signalr
+
+6. Nos vamos a NODE_MODULES. Buscamos "signalr.js" y lo copiamos.
+    D:\RepositorioGitHub\Signal-R\1Proyecto\HelloWork\node_modules\@aspnet\signalr\dist\browser
+
+7. Pegamos en la carpeta "signalr". Que previamente debe de ser creada.
+    D:\RepositorioGitHub\Signal-R\1Proyecto\HelloWork\wwwroot\lib\signalR

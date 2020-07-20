@@ -2,15 +2,21 @@ APOYO
 
 Protocolos de Transporte en Signal R
 
-Signal R tiene la capacitadad de detectar si tu servidor soporta las siguientes técnicas para
-manejar conexiones en tiempo real.
+El servidor web tendra la capacidad de enviar mensajes a los clientes que se conecten a dicha aplicación web.
+
+Signal R tiene la capacitadad de detectar si tu servidor o tu cliente no soporta WEB SOCKETS puede utilizar otros tipos de protocolos como:
+
+SignalR soporta las siguientes técnicas para manejar conexiones en tiempo real.
 
  WebSockets
  Server - SentEvents (por defecto)
  Long Polling
 
+SignalR. Se encargara de abstraer la logica que determina si tu cliente o tu servidor puede soportar algún tipo de conexion de WEB SOCKETS, sino lo 
+soporta utiliza SERVER -SENT EVENTS o caso contrario utiliza LONG POLLING.
+
 * Web Sockets
-	- Full dúplex
+	- Full dúplex(mensajes bidireccional). Puede enviar mensajes desde el servidor hasta el cliente y biseversa de forma simultanea.
 	- Soporta texto y binario.
 	
 	Proceso.
@@ -23,6 +29,7 @@ manejar conexiones en tiempo real.
 	- Solo texto.
 	
 	Proceso.
+	Tu vas a crear un objeto llamado EventServer cual va a permitir que a travez de el vallan llegando mensajes desde el servidor.
 	El servidor solo puede enviar mensaje al cliente. La desventaja que solo se envia texto y no se puede enviar data binaria.
  
 * Long Polling.
@@ -38,14 +45,15 @@ manejar conexiones en tiempo real.
 	Respuesta en texto como en binario.
  
 * Polling 
-	- No es soportado por Signal R
-	- Requiere muchas llamadas HTTP
+	- No es soportado por Signal R.
+	- Requiere muchas llamadas HTTP.
+	- No es una tecnica que escale muy bien.
 	 
 	Proceso.
 	Se manda una peticion por JS al servidor. Si a teniado algún tipo de actualización.
 	Se realiza peticiones por AJAX de forma repetitiva al servidor.
 	
-EN CONSOLA:
+EN CONSOLA DEL NAVEGADOR:
 
 > negotiate > Preview > availableTransports
 

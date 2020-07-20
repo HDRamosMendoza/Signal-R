@@ -7,7 +7,7 @@ Ejemplos en .Net Core 2.1
 Lo utilizamos para trabajae con funcionalidad de tiempo
 real en nuestras aplicaciones de ASP.NET Core.
 
-Signal el protocolo adecuado para tu navegador(websocket, eventos asignados por el servidor).
+Signal R asigna el protocolo adecuado para tu navegador(websocket, eventos asignados por el servidor).
 
 Tendremos funciones de JS del lado de navegador que llamaran a C# y C# llamara a JS.
 

@@ -32,7 +32,7 @@ namespace HelloWork
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            // Agregar SignalR
+            // PASO 1. Agregar SignalR
             services.AddSignalR();
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -55,7 +55,7 @@ namespace HelloWork
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            // Configurar nueva ruta ""/chatHub" de js
+            // PASO2. Configurar nueva ruta HUB. ""/chatHub" de js
             app.UseSignalR(x =>
             {
                 // Registro de los Hubs
