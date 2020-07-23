@@ -63,8 +63,8 @@ EN CONSOLA DEL NAVEGADOR:
 - Caller: El emisor es el que recibirá el mensaje.
 - Others: Todos excepto el emisor recibirán el mensaje.
 - Group: Todos los mienbros de un grupo dado recibirán el mensaje.
-- Client: Un conjunto de personas específicas recibirán el mensaje.
-- User: Un conjunto de usuarios registrados en tu página recibirá el mensaje.
+- Client: Un conjunto de personas específicas recibirán el mensaje. Es una persona que esta conectada a tu servicio.
+- User: Un conjunto de usuarios registrados en tu página recibirá el mensaje. En una persona que esta registrada en tu aplicación.
 
 
 

@@ -21,14 +21,18 @@ connection.on("ReceiveMessage", (user, message) => {
     document.getElementById("messagesList").appendChild(li);
 });
 
-// connection.start().catch(err => console.error(err.toString()));
-// Es una promesa. Cuando la conexion sea exitosa agrego la función "AddToGroup".
-connection.start().then(() => {
-    // Este bloque de código se ejecuta cuando se establece la conexión con el servidor
-    connection.invoke("AddToGroup", group).catch(err => console.error(err.toString()));
-}).catch( err => {
-    console.error(err.toString());
-    event.target.disabled = false;
+
+
+document.getElementById("connect").addEventListener("click", event => {
+    // connection.start().catch(err => console.error(err.toString()));
+    // Es una promesa .start(). Cuando la conexion sea exitosa agrego la función "AddToGroup".
+    connection.start().then(() => {
+        // Este bloque de código se ejecuta cuando se establece la conexión con el servidor
+        connection.invoke("AddToGroup", group).catch(err => console.error(err.toString()));
+    }).catch(err => {
+        console.error(err.toString());
+        event.target.disabled = false;
+    });
 });
 
 document.getElementById("sendButton").addEventListener("click", event => {
