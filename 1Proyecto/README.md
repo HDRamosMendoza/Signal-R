@@ -1,9 +1,7 @@
 ** APOYO
 npm install @aspnet/signalr
 
-
-
-** Crear proyecto.
+** Crear proyecto (Visual Studio 2017).
     A. File > New > Project
     B. New Project > Installed > Visual C# > .NET Core > ASP.NET Core Web Application
     C. Agregamos el nombre.
@@ -20,8 +18,10 @@ Hub. Es la clase que se encarga de coordinar la comunicación bidireccional entr
 	using Microsoft.AspNetCore.SignalR;
 	public class ChatHub: Hub
     {
+        // La función se encargara de distribuir a todos los clientes que estan conectados a nuestra aplicación de chat.
         public async Task SendMessage(string user, string message)
         {
+            // ReceiveMessage. Es el nombre de la función de JS que quiero que se ejecute.
             // await Clients.All.SendAsync("ReceiveMessage", user, message);
             // await Clients.Others.SendAsync("ReceiveMessage", user, message);
             // await Clients.Caller.SendAsync("ReceiveMessage", user, message);
