@@ -55,12 +55,12 @@ soporta utiliza SERVER -SENT EVENTS o caso contrario utiliza LONG POLLING.
 	
 EN CONSOLA DEL NAVEGADOR:
 
-> negotiate > Preview > availableTransports
+> Network > negotiate > Preview > availableTransports
 
 ** Receptores de Mensaje.
 
 - All: Todos van a recibir el mensaje.
-- Caller: El emisor es el que recibirá el mensaje.
+- Caller: El emisor es el que recibirá el mensaje. Un caso hipotetico es cuando un usuario este en un procesamiento y este reciba que se va realizando o termina el procesamiento.
 - Others: Todos excepto el emisor recibirán el mensaje.
 - Group: Todos los mienbros de un grupo dado recibirán el mensaje.
 - Client: Un conjunto de personas específicas recibirán el mensaje. Es una persona que esta conectada a tu servicio.

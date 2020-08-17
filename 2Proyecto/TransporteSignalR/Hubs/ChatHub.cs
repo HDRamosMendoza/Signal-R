@@ -15,7 +15,19 @@ namespace TransporteSignalR.Hubs
             // await Clients.Caller.SendAsync("ReceiveMessage", user, message);
             // await Clients.Caller.SendAsync("ReceiveMessage", user, message);
             // Tiempo
-            //await Task.Delay(1000);
+            // await Task.Delay(1000);
+
+            // Clients.Client("saasas") --> Mensaje privado.
+            // Clients.Clients("saasas") --> Mensaje a un lista de clientes.
+            // Clients.User("saasas") --> Persona que ya esta registrada en mi aplicación.
+            // Clients.Users()
+            
+            /*
+                <a href="@Url.Content("~/Login/SignOut")">
+                    < i class="fa fa-sign-out pull-right"></i>
+                    Salir
+                </a>
+            */
 
             // Se esta separando por grupo de chat.
             await Clients.Group(group).SendAsync("ReceiveMessage", user, message);
