@@ -1,5 +1,6 @@
 ** APOYO
 npm install @aspnet/signalr
+instalar donet 2.1
 
 ** Crear proyecto (Visual Studio 2017).
     A. File > New > Project
