@@ -74,9 +74,9 @@ namespace SignalR_SqlDependency.Services
                 case SqlNotificationInfo.Insert:
                     return "Un registro ha sido INSERTADO";
                 case SqlNotificationInfo.Delete:
-                    return "Un registro ha sido INSERTADO";
+                    return "Un registro ha sido DELETE";
                 case SqlNotificationInfo.Update:
-                    return "Un registro ha sido INSERTADO";
+                    return "Un registro ha sido UPDATE";
                 default:
                     return "Un cambio desconocido ha ocurrido";
             }
