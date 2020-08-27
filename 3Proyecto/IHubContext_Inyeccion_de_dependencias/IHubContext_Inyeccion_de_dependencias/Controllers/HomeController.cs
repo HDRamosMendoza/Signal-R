@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using IHubContext_Inyeccion_de_dependencias.Hubs;
 using IHubContext_Inyeccion_de_dependencias.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
-using IHubContext_Inyeccion_de_dependencias.Hubs;
+using System.Diagnostics;
 
 namespace IHubContext_Inyeccion_de_dependencias.Controllers
 {
